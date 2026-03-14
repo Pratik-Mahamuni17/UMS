@@ -1,6 +1,6 @@
 FROM gradle:8.5-jdk21 AS build
 WORKDIR /app
-COPY . .
+COPY src .
 RUN ./gradlew build -x test
 
 FROM eclipse-temurin:21-jdk
